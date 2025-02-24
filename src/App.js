@@ -43,9 +43,8 @@ function Accordion({ data }) {
 }
 
 function AccordionItem({ num, title, text, curOpen, onOpen }) {
-  const [isOpen, setIsOpen] = useState(false);
   function handleToggele() {
-    setIsOpen((isOpen) => !isOpen);
+    // setIsOpen((isOpen) => !isOpen);
   }
   return (
     <div className={`item ${isOpen ? "open" : ""}`} onClick={handleToggele}>
