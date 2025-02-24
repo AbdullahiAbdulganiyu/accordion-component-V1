@@ -25,6 +25,7 @@ export default function App() {
 }
 
 function Accordion({ data }) {
+  const [curOpen, seIsOpen] = useState(null);
   return (
     <div>
       {data.map((el, i) => (
