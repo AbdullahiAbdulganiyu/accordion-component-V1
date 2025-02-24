@@ -43,6 +43,7 @@ function Accordion({ data }) {
 }
 
 function AccordionItem({ num, title, text, curOpen, onOpen }) {
+  const isOpen = num === curOpen;
   function handleToggele() {
     // setIsOpen((isOpen) => !isOpen);
   }
