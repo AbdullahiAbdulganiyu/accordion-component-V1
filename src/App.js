@@ -25,11 +25,18 @@ export default function App() {
 }
 
 function Accordion({ data }) {
-  const [curOpen, seIsOpen] = useState(null);
+  const [curOpen, setIsOpen] = useState(null);
   return (
     <div>
       {data.map((el, i) => (
-        <AccordionItem title={el.title} text={el.text} num={i} key={el.title} />
+        <AccordionItem
+          curOpen={curOpen}
+          onOpen={setIsOpen}
+          title={el.title}
+          text={el.text}
+          num={i}
+          key={el.title}
+        />
       ))}
     </div>
   );
